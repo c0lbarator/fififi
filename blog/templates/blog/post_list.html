@@ -9,11 +9,12 @@
         <h1>FaerCast Updates</h1>
     </div>
     <div>
-        <h2>Создание страницы с апдейтами</h2>
-        <p>Опубликовано: 09.05.2021, 19:44</p>
-        <p>Кароч, не знаю как вышло,<br>
-        но страница с апдейтами вышла раньше<br>
-        чем сам FaerCast</p>
+        {% for post in posts %}
+            <div>
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>
